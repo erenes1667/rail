@@ -2,7 +2,7 @@
 
 Stripped-down Amphetamine for Apple Silicon Macs. Menu-bar app that keeps macOS awake on demand, with a syringe-into-bicep animation that settles into a continuous flex while active.
 
-![menu bar pill → inject animation → flexing bicep]
+![Rail menu-bar demo: pill icon, then inject + flex animation](docs/rail-demo.gif)
 
 ## Why
 
