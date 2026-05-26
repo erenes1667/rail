@@ -17,13 +17,26 @@
 
 ## Install
 
-**Option A — download the prebuilt app:**
+**Homebrew (recommended):**
 
-Grab `Rail.app.zip` from the [latest release](https://github.com/erenes1667/rail/releases/latest), unzip, drag to `/Applications`, right-click → Open (one-time Gatekeeper bypass — the app is ad-hoc signed, not notarized).
+```sh
+brew tap erenes1667/rail
+brew install --cask rail
+```
 
-**Option B — build from source:**
+The cask strips the quarantine attribute on install, so Rail launches without the "Apple cannot check it for malicious software" prompt.
 
-```bash
+**Manual download:**
+
+Grab `Rail.app.zip` from the [latest release](https://github.com/erenes1667/rail/releases/latest), unzip, drag to `/Applications`. Right-click the app and select **Open** the first time (Gatekeeper bypass — the app is ad-hoc signed, not notarized), or strip quarantine yourself:
+
+```sh
+xattr -dr com.apple.quarantine /Applications/Rail.app
+```
+
+**Build from source:**
+
+```sh
 git clone https://github.com/erenes1667/rail
 cd rail
 ./build.sh --launch
